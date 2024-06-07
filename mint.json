@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Payroc Developers",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/payroc-digital-dark.svg",
+    "light": "/logo/payroc-digital-light.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "colors": {
-    "primary": "#0D9373",
+    "primary": "#6F5CA7",
     "light": "#07C983",
     "dark": "#0D9373",
     "anchors": {
@@ -17,12 +17,16 @@
   },
   "topbarLinks": [
     {
+      "name": "Changelog",
+      "url": "/change-log"
+    },
+    {
       "name": "Support",
       "url": "mailto:hi@mintlify.com"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
+    "name": "Learn",
     "url": "https://dashboard.mintlify.com"
   },
   "tabs": [
@@ -48,6 +52,7 @@
       "url": "https://mintlify.com/blog"
     }
   ],
+  "openapi": ["/api-reference/openapi.yaml"],
   "navigation": [
     {
       "group": "Get Started",
@@ -75,11 +80,212 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Funding recipients",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/api/funding-recipients/list-funding-recipients",
+        "api-reference/api/funding-recipients/create-funding-recipient",
+        "api-reference/api/funding-recipients/retrieve-a-funding-recipient",
+        "api-reference/api/funding-recipients/update-funding-recipient",
+        "api-reference/api/funding-recipients/delete-funding-recipient",
+        "api-reference/api/funding-recipients/list-funding-accounts",
+        "api-reference/api/funding-recipients/create-funding-account",
+        "api-reference/api/funding-recipients/list-funding-recipient-owners",
+        "api-reference/api/funding-recipients/create-funding-recipient-owner"
+      ]
+    },
+    {
+      "group": "Funding accounts",
+      "pages": [
+        "api-reference/api/funding-accounts/list-funding-accounts",
+        "api-reference/api/funding-accounts/retrieve-funding-account",
+        "api-reference/api/funding-accounts/update-funding-account",
+        "api-reference/api/funding-accounts/delete-funding-account"
+      ]
+    },
+    {
+      "group": "Owners",
+      "pages": [
+        "api-reference/api/owners/retrieve-owner",
+        "api-reference/api/owners/update-owner",
+        "api-reference/api/owners/delete-owner"
+      ]
+    },
+    {
+      "group": "Pricing intents",
+      "pages": [
+        "api-reference/api/pricing-intents/list-pricing-intents",
+        "api-reference/api/pricing-intents/create-pricing-intent",
+        "api-reference/api/pricing-intents/retrieve-pricing-intent",
+        "api-reference/api/pricing-intents/update-pricing-intent",
+        "api-reference/api/pricing-intents/delete-pricing-intent",
+        "api-reference/api/pricing-intents/partially-update-pricing-intent"
+      ]
+    },
+    {
+      "group": "Funding instructions",
+      "pages": [
+        "api-reference/api/funding-instructions/list-funding-instructions",
+        "api-reference/api/funding-instructions/create-funding-instruction",
+        "api-reference/api/funding-instructions/retrieve-funding-instruction",
+        "api-reference/api/funding-instructions/update-funding-instruction",
+        "api-reference/api/funding-instructions/delete-funding-instruction"
+      ]
+    },
+    {
+      "group": "Funding activity",
+      "pages": [
+        "api-reference/api/funding-activity/retrieve-funding-balance",
+        "api-reference/api/funding-activity/list-funding-activity"
+      ]
+    },
+    {
+      "group": "Settlement",
+      "pages": [
+        "api-reference/api/settlement/list-batches",
+        "api-reference/api/settlement/retrieve-batch",
+        "api-reference/api/settlement/list-transactions",
+        "api-reference/api/settlement/retrieve-transaction",
+        "api-reference/api/settlement/list-authorizations",
+        "api-reference/api/settlement/retrieve-authorization",
+        "api-reference/api/settlement/list-disputes",
+        "api-reference/api/settlement/list-dispute-statuses"
+      ]
+    },
+    {
+      "group": "Payment plans",
+      "pages": [
+        "api-reference/api/payment-plans/list-payment-plans",
+        "api-reference/api/payment-plans/create-payment-plan",
+        "api-reference/api/payment-plans/retrieve-payment-plan",
+        "api-reference/api/payment-plans/delete-payment-plan",
+        "api-reference/api/payment-plans/update-payment-plan"
+      ]
+    },
+    {
+      "group": "Subscriptions",
+      "pages": [
+        "api-reference/api/subscriptions/list-subscriptions",
+        "api-reference/api/subscriptions/create-subscription",
+        "api-reference/api/subscriptions/retrieve-subscription",
+        "api-reference/api/subscriptions/update-subscription",
+        "api-reference/api/subscriptions/deactivate-subscription",
+        "api-reference/api/subscriptions/re-activate-subscription",
+        "api-reference/api/subscriptions/pay-manual-subscription"
+      ]
+    },
+    {
+      "group": "Secure tokens",
+      "pages": [
+        "api-reference/api/secure-tokens/list-secure-tokens",
+        "api-reference/api/secure-tokens/create-secure-token",
+        "api-reference/api/secure-tokens/retrieve-secure-token",
+        "api-reference/api/secure-tokens/delete-secure-token",
+        "api-reference/api/secure-tokens/update-secure-token"
+      ]
+    },
+    {
+      "group": "Payments",
+      "pages": [
+        "api-reference/api/payments/list-payments",
+        "api-reference/api/payments/create-payment",
+        "api-reference/api/payments/retrieve-payment",
+        "api-reference/api/payments/adjust-payment",
+        "api-reference/api/payments/capture-payment",
+        "api-reference/api/payments/reverse-payment",
+        "api-reference/api/payments/refund-payment"
+      ]
+    },
+    {
+      "group": "Payment instructions",
+      "pages": [
+        "api-reference/api/payment-instructions/submit-payment-instruction",
+        "api-reference/api/payment-instructions/retrieve-payment-instruction"
+      ]
+    },
+    {
+      "group": "Refunds",
+      "pages": [
+        "api-reference/api/refunds/list-refunds",
+        "api-reference/api/refunds/create-refund",
+        "api-reference/api/refunds/retrieve-refund",
+        "api-reference/api/refunds/adjust-refund",
+        "api-reference/api/refunds/reverse-refund"
+      ]
+    },
+    {
+      "group": "Refund instructions",
+      "pages": [
+        "api-reference/api/refund-instructions/submit-refund-instruction",
+        "api-reference/api/refund-instructions/retrieve-refund-instruction"
+      ]
+    },
+    {
+      "group": "Cards",
+      "pages": [
+        "api-reference/api/cards/verify-a-card",
+        "api-reference/api/cards/balance-inquiry",
+        "api-reference/api/cards/lookup-bin-information"
+      ]
+    },
+    {
+      "group": "Currency conversion",
+      "pages": [
+        "api-reference/api/currency-conversion/fx-rates-inquiry"
+      ]
+    },
+    {
+      "group": "Bank transfer payments",
+      "pages": [
+        "api-reference/api/bank-transfer-payments/list-payments",
+        "api-reference/api/bank-transfer-payments/create-payment",
+        "api-reference/api/bank-transfer-payments/retrieve-payment",
+        "api-reference/api/bank-transfer-payments/reverse-payment",
+        "api-reference/api/bank-transfer-payments/refund-payment",
+        "api-reference/api/bank-transfer-payments/re-present-payment"
+      ]
+    },
+    {
+      "group": "Bank transfer refunds",
+      "pages": [
+        "api-reference/api/bank-transfer-refunds/list-refunds",
+        "api-reference/api/bank-transfer-refunds/create-refund",
+        "api-reference/api/bank-transfer-refunds/retrieve-refund",
+        "api-reference/api/bank-transfer-refunds/reverse-refund"
+      ]
+    },
+    {
+      "group": "Bank accounts",
+      "pages": [
+        "api-reference/api/bank-accounts/verify-a-bank-account"
+      ]
+    },
+    {
+      "group": "Merchant platforms",
+      "pages": [
+        "api-reference/api/merchant-platforms/list-merchant-platforms",
+        "api-reference/api/merchant-platforms/create-merchant-platform",
+        "api-reference/api/merchant-platforms/retrieve-merchant-platform",
+        "api-reference/api/merchant-platforms/list-merchant-platforms-processing-accounts",
+        "api-reference/api/merchant-platforms/create-processing-account"
+      ]
+    },
+    {
+      "group": "Processing accounts",
+      "pages": [
+        "api-reference/api/processing-accounts/retrieve-processing-account",
+        "api-reference/api/processing-accounts/list-processing-accounts-funding-accounts",
+        "api-reference/api/processing-accounts/list-contacts",
+        "api-reference/api/processing-accounts/get-processing-account-pricing-agreement",
+        "api-reference/api/processing-accounts/list-owners",
+        "api-reference/api/processing-accounts/create-reminder-for-processing-account"
+      ]
+    },
+    {
+      "group": "Contacts",
+      "pages": [
+        "api-reference/api/contacts/retrieve-contact",
+        "api-reference/api/contacts/update-contact",
+        "api-reference/api/contacts/delete-contact"
       ]
     }
   ],
